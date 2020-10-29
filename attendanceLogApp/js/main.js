@@ -137,6 +137,7 @@ let Switch = function (mainSelector, itemSelector, titleSelector) {
 Switch.prototype = function () {
     
     let chekOut = function (e, elem) {
+        console.log(elem);
         if (!e.target.classList.contains(elem.getTitle())) { // проверям кликнули ли по заголовку, если нет - останавливаем функцию
             return;
         }
