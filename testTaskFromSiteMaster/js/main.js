@@ -7,6 +7,8 @@ const formProximity = document.querySelectorAll('.catalog__form-proximity'),
     formOptionText = document.querySelectorAll('.catalog__form-addoption-text'),
     more = document.querySelector('.catalog__form-more'),
     activeFormItem = document.querySelector('.catalog__form-hidden-item'),
+
+    formItemText = document.querySelector('.catalog__form-more-hidden'),
     imgOne = document.querySelector('.catalog__form-img-one'),
     imgTwo = document.querySelector('.catalog__form-img-two'),
     imgThree = document.querySelector('.catalog__form-img-three'),
@@ -52,6 +54,11 @@ for (let i = 0; i < formOption.length; i++) {
 more.onclick = function () {
     more.classList.add("active");
     activeFormItem.classList.add("active");
+}
+
+formItemText.onclick = function() {
+    more.classList.remove("active");
+    activeFormItem.classList.remove("active");
 }
 
 imgOne.onclick = function () {

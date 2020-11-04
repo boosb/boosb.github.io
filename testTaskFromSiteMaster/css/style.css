@@ -356,6 +356,10 @@ h1, h2, h3, h4, h5, h6 {
     left: 2px;
 }
 
+.catalog__form-addoption-text{
+    color: #3C3C3C;
+}
+
 .catalog__form-addoption-text.active{
     font-weight: 500;
 }
@@ -376,6 +380,17 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: underline;
 }
 
+.catalog__form-more-hidden{
+    color: #4290C9;
+    font-size: 16px;
+    line-height: 19px;
+    cursor: pointer;
+}
+
+.catalog__form-more-hidden:hover{
+    text-decoration: underline;
+}
+
 .catalog__form-hidden-item{
     display: none;
 }
@@ -387,6 +402,7 @@ h1, h2, h3, h4, h5, h6 {
 .catalog__services{
     width: 125px;
     margin-bottom: 30px;
+    color: #3C3C3C;
 }
 
 .switcher{
