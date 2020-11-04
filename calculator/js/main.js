@@ -14,6 +14,7 @@ const one = document.getElementById("one"),
     plus = document.getElementById("plus"),
     minus = document.getElementById("minus"),
 
+    reset = document.getElementById("reset"),
     finalNum = document.getElementById("final-num"),
     rezult = document.getElementById("rezult");
 
@@ -89,11 +90,62 @@ minus.onclick = function () {
     rezult.textContent = rezultString;
 }
 
-finalNum.onclick = function() {
+function fnPlus() {
+    let rezultNum = rezultString.split('+'),
+        rezultNumber = 0;
+    //console.log(Number(rezultNumber[2]))
+    for (let i=0; i < rezultNum.length; i++) {
+        let item = Number(rezultNum[i]);
+        rezultNumber += item;
+    }
 
+    //rezultNumber = Number(rezultNumber[0]) + Number(rezultNumber[1]);
     
+    return rezultNumber;
+}
 
+function fnMinus() {
+    let rezultNumber = rezultString.split('-');
+    rezultNumber = Number(rezultNumber[0]) - Number(rezultNumber[1]);
+    return rezultNumber;
+}
 
-    console.log(rezultString)
-    console.log(Number(rezultString))
+function fnMultiply() {
+    let rezultNumber = rezultString.split('*');
+    rezultNumber = Number(rezultNumber[0]) * Number(rezultNumber[1]);
+    return rezultNumber;
+}
+
+function fnShare() {
+    let rezultNumber = rezultString.split('/');
+    rezultNumber = Number(rezultNumber[0]) / Number(rezultNumber[1]);
+    return rezultNumber;
+}
+
+finalNum.onclick = function () {
+    for (let i = 0; i < rezultString.length; i++) {
+        let item = rezultString[i];
+
+        if (item === '+') {
+            rezult.textContent = fnPlus();
+        }
+
+        if (item === '-') {
+            rezult.textContent = fnMinus();
+        }
+
+        if (item === '/') {
+            rezult.textContent = fnShare();
+        }
+
+        if (item === '*') {
+            rezult.textContent = fnMultiply();
+        }
+    }
+}
+
+reset.onclick = function() {
+    rezult.textContent = '';
+    //console.log(rezultString)
+    rezultString = '';
 }
