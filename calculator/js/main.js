@@ -7,6 +7,7 @@ const one = document.getElementById("one"),
     seven = document.getElementById("seven"),
     eight = document.getElementById("eight"),
     nine = document.getElementById("nine"),
+    zero = document.getElementById("zero"),
     dot = document.getElementById("dot"),
 
     multiply = document.getElementById("multiply"),
@@ -62,6 +63,11 @@ eight.onclick = function () {
 
 nine.onclick = function () {
     rezultString = rezultString + '9';
+    rezult.textContent = rezultString;
+}
+
+zero.onclick = function () {
+    rezultString = rezultString + '0';
     rezult.textContent = rezultString;
 }
 
